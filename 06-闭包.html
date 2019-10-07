@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //6 闭包 函数嵌套函数 
+        // function fn(x) {
+        //     return function fn1(y) {
+        //         //函数体
+        //     }
+        // }
+        // var fnn = fn(a);
+        function makeAdder(x) {
+            //x+5
+            return function(y) {
+                return x + y;
+            }
+        }
+        var add5 = makeAdder(5);
+        //x + 5 =?
+        console.log(add5(2)); //x=2 +5 =7
+
+        var add10 = makeAdder(10); //x +10
+        console.log(add10(2)); //x = 2 + 10 = 12
+    </script>
+</body>
+
+</html>

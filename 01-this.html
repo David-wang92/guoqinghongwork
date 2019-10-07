@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //默认绑定中的this
+        // function foo() {};
+        // console.log(this.a);
+
+        // var a = 2;
+        // foo();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //显示绑定中的this
+        // function foo() {
+        //     console.log(this.a);
+        // }
+
+        // var a = 2;
+
+        // var obj1 = {
+        //     a: 3,
+        // };
+
+        // var obj2 = {
+        //     a: 4,
+        // };
+        // foo.call(obj1); //3
+        // foo.call(obj2); //4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //箭头函数中的this
+        function foo() {
+            return () => {
+                console.log(this.a);
+            }
+        }
+        var a = 2;
+        var obj = {
+            a: 3,
+            foo: foo
+        };
+        var bar = obj.foo();
+        bar(); //3
+    </script>
+</body>
+
+</html>

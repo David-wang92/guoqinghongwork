@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //7 ES6常用语法
+        //1 声明 var let const 
+        //const 声明常量  const PAI = 3.14 
+        //let  声明变量 let a = 123 var 声明提升  const和let 作用域限制的
+
+
+        // function an() {
+        //     let a = 2;
+        // }
+        // an();
+        // console.log(a);
+        //2 赋值解构
+        function foo() {
+            return [1, 2, 3];
+        }
+        let arr = foo(); // [1,2,3]
+
+        let [c, a, b] = foo();
+        console.log(a, b, c); // 2 3 1
+
+        function bar() {
+            return {
+                x: 4,
+                y: 5,
+                z: 6
+            };
+        }
+        let {
+            x: x,
+            y: y,
+            z: z
+        } = bar();
+        console.log(x, y, z); // 4 5 6
+    </script>
+</body>
+
+</html>

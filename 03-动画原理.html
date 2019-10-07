@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #scrollLeft {
+            width: 45px;
+            height: 50px;
+            border: 1px dashed red;
+            margin: 30px 50%;
+            color: blue;
+            font-size: 45px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="scrollLeft">
+    <script>
+        //3 动画原理
+        var scrollLeftEle = document.getElementById("scrollLeft");
+        var str = "一二三四五六七八";
+        //第二次拿到的str = "二三四五六七八"
+        // _left _top 每一张图片的宽（左右移动） 高（上下移动）
+        //rgba
+        //opacity ->0-1 opacity*100   0->100    opacity(计算过的)/100
+        function scrollLeft() {
+            scrollLeftEle.value = str;
+            str = str.substring(1, str.length) + str.substring(0, 1);
+        }
+        var timer = setInterval(scrollLeft, 1000); //50-70ms
+    </script>
+</body>
+
+</html>
